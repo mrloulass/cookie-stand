@@ -11,5 +11,5 @@ I built an Object literals for each location use properties and methods to calcu
 * 
 
 ### Reflections and Comments
-* Consider including the answers to your daily journal and submission questions here
-* This is also a good place to reflect on the tools and resources used and learned
+* This lab was hard and trying to put the different concepts together became difficult. I've learn to code line by line and use console.log to run code block. I do this to see if the code works.
+* I had help from another classmate Tom and TA Bryant. 
