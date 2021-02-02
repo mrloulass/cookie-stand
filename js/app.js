@@ -1,7 +1,5 @@
 'use strict';
 
-// console.log('Hello World');
-
 // add global variables
 //  - add hours array
 //  - add elements by id for table
@@ -10,12 +8,6 @@ let hours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:0
 let allCookiesStands = [];
 
 let cookieTable = document.getElementById('cookieTable');
-
-let tr = document.createElement('tr');
-cookieTable.appendChild(tr);
-let topHours = document.createElement('td');
-topHours.textContent = hours;
-tr.appendChild(topHours);
 
 // change object literals to constructor object functions
 function Store(name, minimunCustomerHourly, maximumCustomerHourly, avgerageCookiesSoldPerCustomer) {
@@ -31,6 +23,7 @@ function Store(name, minimunCustomerHourly, maximumCustomerHourly, avgerageCooki
 Store.prototype.randomCustomerHourly = function () {
   return Math.floor(Math.random() * (this.maximumCustomerHourly - this.minimunCustomerHourly + 1) + this.minimunCustomerHourly);
 };
+
 Store.prototype.calCookiesSoldHourly = function () {
   for (let i = 0; i < hours.length; i++) {
     let randomCustomer = this.randomCustomerHourly();
@@ -41,6 +34,7 @@ Store.prototype.calCookiesSoldHourly = function () {
 };
 Store.prototype.render = function () {
   this.calCookiesSoldHourly();
+
 
   let tr = document.createElement('tr');
   cookieTable.appendChild(tr);
@@ -55,24 +49,42 @@ Store.prototype.render = function () {
     tr.appendChild(td);
   }
   let td = document.createElement('td');
-  td.textContent = `Total: ${this.dailyStoreTotal}`;
+  td.textContent = `${this.dailyStoreTotal}`;
   tr.appendChild(td);
 };
 
-let seattle = new Store('Seattle', 23, 65, 6.3);
-// console.log(seattle);
-let tokyo = new Store('Tokyo', 3, 24, 1.2);
-let dubai = new Store('Dubai', 11, 38, 3.7);
-let paris = new Store('Paris', 20, 38, 2.3);
-let lima = new Store('Lima', 2, 16, 4.6);
 
-function renderAll(){
+
+new Store('Seattle', 23, 65, 6.3);
+new Store('Tokyo', 3, 24, 1.2);
+new Store('Dubai', 11, 38, 3.7);
+new Store('Paris', 20, 38, 2.3);
+new Store('Lima', 2, 16, 4.6);
+
+function renderAll() {
   // use a for loop
-  for (let i = 0; i < allCookiesStands.length; i++){
+  for (let i = 0; i < allCookiesStands.length; i++) {
     allCookiesStands[i].render();
   }
+
 }
+function renderOne() {
+  let header = document.createElement('thead');
+  cookieTable.appendChild(header);
+  let th = document.createElement('th');
+  header.appendChild(th);
+  for (let i = 0; i < hours.length; i++) {
+    let th = document.createElement('th');
+    th.textContent = hours[i];
+    header.appendChild(th);
+  }
+  th = document.createElement('th');
+  th.textContent = 'Totals';
+  header.appendChild(th);
+}
+renderOne();
 renderAll();
+
 // seattle.render();
 // tokyo.render();
 // dubai.render();
