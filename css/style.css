@@ -1,3 +1,33 @@
+h1 {
+  font-size: xx-large;
+  margin-left:0;
+  padding: 10px;
+}
+
 body {
   background-color: rgb(231, 231, 177);
+  max-width: 960px;
+  max-width: auto;
+}
+img {
+  margin-left: 200px;
+}
+nav {
+  padding: 10px;
+}
+
+p {
+  padding: 10px;
+}
+a {
+  padding: 10px;
+}
+table, th, td, tr{
+  border: 2px solid black;
+  padding: 4px;
+  margin-left: 25px;
+}
+
+li {
+  display: inline;
 }
