@@ -31,3 +31,15 @@ I built an Object literals for each location use properties and methods to calcu
 ### Reflections and Comments
 
 * You can take an object constructor function an create many objects of the same type. This help with cleaner code, less code lines and more memory space for other data.  I've learn how make a dynamic HTML table for a web site by using JavaScript. I'm still working on understanding the different concepts and how they work together. 
+
+# LAB - 08a
+
+## Work on styling the cookie stand project
+
+Worked on styling and wirefaming in HTML an CSS
+
+### Author: Louis Lassegue
+
+
+### Reflections and Comments
+* Styling does take some time to do. I started with a idea, than wire frame, next HTML structure and last CSS styles.

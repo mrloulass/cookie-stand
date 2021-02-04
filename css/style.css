@@ -1,33 +1,110 @@
-h1 {
-  font-size: xx-large;
-  margin-left:0;
-  padding: 10px;
-}
-
 body {
   background-color: rgb(231, 231, 177);
   max-width: 960px;
-  max-width: auto;
-}
-img {
-  margin-left: 200px;
-}
-nav {
-  padding: 10px;
+  max-height: auto;
 }
 
-p {
-  padding: 10px;
+#main {
+  background-color: #fff;
+  font-family: 'Libre Baskerville', serif;
+  font-size: xx-large;
+  margin-left:100px;
+  padding: 20px;
+  text-align: center;
 }
-a {
-  padding: 10px;
+
+header{
+  background-color: #fff;
+  display: block;
+  margin-top: 25px;
+  padding: 20Px;
+  margin-left: 100px;
+  text-align:center;
+
 }
-table, th, td, tr{
+li {
+padding-left: 100px;
+display:inline-block;
+}
+
+header img {
+  max-width: 25%;
+  height: auto;
+  float: left;
+  margin: -30px;
+  
+}
+
+main {
+  background-color: #fff;
+  margin-top: 25px;
+  padding: 20Px;
+  margin-left: 100px;
+  text-align:center;
+
+}
+main img {
+  float:left;
+  margin-right: 25px;
+  max-width: 15%;
+  height: auto;
+}
+
+main p {
+  text-align:justify;
+
+}
+section{
+  background-color: #fff;
+  margin-top: 25px;
+  margin-left: 100px;
+}
+section img {
+  max-width: 15%;
+  height: auto;
+  float: left;
+  margin-left: 10px;
+}
+section h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  color:black;
+}
+ul {
+  background-color:rgba(247, 247, 170, 0.897) ;
+}
+section li{
+padding: 10px;
+}
+
+h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  color:black;
+} 
+
+div img{
+  max-width: 25%;
+  height: auto;
+  float: left;
+  margin-left: 20px;
+}
+
+#about {
+  background-color: #fff;
+  margin-left: 100px;
+  padding:20px;
+  margin-top: 25px;
+  
+}
+
+
+#sales {
+  font-family: 'Noto Sans HK', sans-serif;
+}
+
+table, th, td, tr {
   border: 2px solid black;
   padding: 4px;
   margin-left: 25px;
-}
-
-li {
-  display: inline;
 }
