@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(231, 231, 177);
+  background-color: rgb(228, 235, 170);
   max-width: 960px;
   max-height: auto;
 }
@@ -7,6 +7,7 @@ body {
 #main {
   background-color: #fff;
   font-family: 'Libre Baskerville', serif;
+  color:rgba(196, 41, 41, 0.829);
   font-size: xx-large;
   margin-left:100px;
   padding: 20px;
@@ -52,6 +53,7 @@ main img {
 
 main p {
   text-align:justify;
+  line-height: 2;
 
 }
 section{
@@ -63,48 +65,109 @@ section img {
   max-width: 15%;
   height: auto;
   float: left;
-  margin-left: 10px;
+  margin-left: 15px;
+  padding-top: 15px;
 }
 section h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: large;
-  color:black;
+  color:rgb(167, 104, 4);
 }
 ul {
-  background-color:rgba(247, 247, 170, 0.897) ;
+  background-color:rgba(145, 226, 226, 0.767) ;
 }
-section li{
+section ul li {
 padding: 10px;
 }
 
 h2{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: large;
-  color:black;
+  color:rgb(1, 110, 153);
+  padding: 15px
 } 
 
 div img{
-  max-width: 25%;
+  max-width: 30%;
   height: auto;
-  float: left;
-  margin-left: 20px;
+  float:left;
+  margin-left: 5px;
+  padding: 15px;
+}
+#family {
+background-color: rgba(145, 226, 226, 0.767);
+padding: 10px;
+margin:auto;
+color: rgb(27, 22, 22);
+line-height: 2;
 }
 
 #about {
   background-color: #fff;
   margin-left: 100px;
-  padding:20px;
-  margin-top: 25px;
-  
+  padding:10px;
+  margin-top: 30px;
 }
-
+ article {
+  background-color: #fff;
+  margin-top: 25px;
+  margin-left: 100px;
+  text-align: center;
+  padding: 25px;
+}
+article img{
+  max-width: 20%;
+  height: auto;
+  padding: 25px;
+}
+article p{
+  background-color:rgba(145, 226, 226, 0.767);
+  padding: 10px;
+  margin:auto;
+}
+footer{
+  background-color: #fff;
+  margin-top: 25px;
+  margin-left: 100px;
+  margin-bottom: 25px;
+  padding: 25px;
+}
+footer a{
+  background-color:rgb(228, 235, 170);
+  font-weight: bolder;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
 #sales {
   font-family: 'Noto Sans HK', sans-serif;
+  font-size: xx-large;
+  margin-left:100px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 table, th, td, tr {
   border: 2px solid black;
-  padding: 4px;
-  margin-left: 25px;
+  padding: 8px;
+  margin-left: 100px;
+  text-align: center;
+
+}
+
+thead {
+  background-color:rgba(243, 245, 211, 0.986);
+}
+
+tr:nth-child(even){
+  background-color:rgba(194, 243, 243, 0.986);
+}
+
+#fishsales{
+  margin-left: 100px;
+  margin-top: 25px;
+  max-width: 20%;
+  height: auto;
 }
