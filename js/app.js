@@ -9,6 +9,10 @@ let allCookiesStands = [];
 
 let cookieTable = document.getElementById('cookieTable');
 
+let totalsForFooter = [];
+
+let grandTotals = 0;
+
 // change object literals to constructor object functions
 function Store(name, minimunCustomerHourly, maximumCustomerHourly, avgerageCookiesSoldPerCustomer) {
   this.name = name;
@@ -34,10 +38,11 @@ Store.prototype.calCookiesSoldHourly = function () {
 };
 Store.prototype.render = function () {
   this.calCookiesSoldHourly();
-
+  let tableBody = document.createElement('tbody');
+  cookieTable.appendChild(tableBody);
 
   let tr = document.createElement('tr');
-  cookieTable.appendChild(tr);
+  tableBody.appendChild(tr);
 
   let th = document.createElement('th');
   th.textContent = this.name;
@@ -53,8 +58,18 @@ Store.prototype.render = function () {
   tr.appendChild(td);
 };
 
-
-
+function calFooterTotals() {
+  totalsForFooter = [];
+  grandTotals = 0;
+  for (let i = 0; i < hours.length; i++); {
+    let hourTotal = 0;
+    for (let j = 0; j < allCookiesStands.length; j++); {
+      hourTotal += allCookiesStands[j].cookiesSoldHourlyArray[i];
+    }
+    totalsForFooter.push(hourTotal);
+    grandTotals += hourTotal;
+  }
+}
 new Store('Seattle', 23, 65, 6.3);
 new Store('Tokyo', 3, 24, 1.2);
 new Store('Dubai', 11, 38, 3.7);
@@ -68,7 +83,7 @@ function renderAll() {
   }
 
 }
-function renderOne() {
+function renderHeader() {
   let header = document.createElement('thead');
   cookieTable.appendChild(header);
   let th = document.createElement('th');
@@ -79,11 +94,33 @@ function renderOne() {
     header.appendChild(th);
   }
   th = document.createElement('th');
-  th.textContent = 'Totals';
+  th.textContent = 'Daily Location Total';
   header.appendChild(th);
 }
-renderOne();
+
+function renderFooter() {
+  calFooterTotals();
+  let tfooter = document.createElement('tfoot');
+  let tr = document.createElement('tr');
+  let td = document.createElement('td');
+  td.textContent = 'Totals';
+  tr.appendChild(td);
+
+  for (let i = 0; i < hours.length; i++) {
+    let td = document.createElement('td');
+    td.textContent = 42;
+    tr.appendChild(td);
+  }
+  td = document.createElement('td');
+  td.textContent = 4242;
+  tr.appendChild(td);
+
+  tfooter.appendChild(tr);
+  cookieTable.appendChild(tfooter);
+}
+renderHeader();
 renderAll();
+renderFooter();
 
 // seattle.render();
 // tokyo.render();
