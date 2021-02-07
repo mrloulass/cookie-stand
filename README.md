@@ -48,7 +48,7 @@ Worked on styling and wirefaming in HTML an CSS
 
 ## cookie-stand - Add a form to the cookie stand project -
 
-I add a fieldset form in the HTML sales file. To add new location for the cookie stands lab
+I add a fieldset form in the HTML sales file. To add new location for the cookie stands for lab. I add a event listener and constructor.
 
 ### Author: Louis Lassgue
 
@@ -58,4 +58,4 @@ I add a fieldset form in the HTML sales file. To add new location for the cookie
 
 ### Reflections and Comments
 
-* I tried to add the total number of imput in the form. Then take that data and put it in the table. I've been having problems with the if statement and array.
+* I tried to add the total number of input in the form. Then take that data and put it in the table. I've been having problems with the if statement and array. The total for loop nested is not working. The console.log states j is not define.

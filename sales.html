@@ -13,21 +13,26 @@
   <h1 id="sales">Salmon Cookies Sales</h1>
   <form id="box-one">
     <fieldset>
-      <legend>New Cookie Store Location</legend>
+      <legend>New Cookie Store Locations</legend>
 
-      <label>Location
-        <input type="text" name="store">
-      </label>
-      <label>Minimun Customer per Hour
-        <input type="number" name="minimun">
-      </label>
-      <label>Maximum Customer per Hour
+      <label for="location">Store Location: </label>
+        <input type="text" name="location">
+
+      <label for="minimum">Minimum Customer: </label>
+        <input type="number" name="minimum">
+      
+      <label for="maximum">Maximum Customer: </label>
         <input type="number" name="maximum">
-      </label>
-      <label>Average Cookies Sold per Customer
+      
+      <label for="average">Average Cookies Sold: </label> 
         <input type="number" name="average">
-    </fieldset>
+        
+        <button type="submit">Submit Store Data: </button>
+    
+      </fieldset>
   </form>
+
+  
 
   <table id="cookieTable"></table>
 
