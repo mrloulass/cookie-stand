@@ -43,3 +43,19 @@ Worked on styling and wirefaming in HTML an CSS
 
 ### Reflections and Comments
 * Styling does take some time to do. I started with a idea, than wire frame, next HTML structure and last CSS styles.
+
+# LAB - 09
+
+## cookie-stand - Add a form to the cookie stand project -
+
+I add a fieldset form in the HTML sales file. To add new location for the cookie stands lab
+
+### Author: Louis Lassgue
+
+### Links and Resources
+
+* [use docs for returns a random integer between the specified values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 
+
+### Reflections and Comments
+
+* I tried to add the total number of imput in the form. Then take that data and put it in the table. I've been having problems with the if statement and array.

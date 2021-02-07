@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(228, 235, 170);
+  background-color: rgb(231, 236, 189);
   max-width: 960px;
   max-height: auto;
 }
@@ -149,19 +149,21 @@ footer a{
   margin-top: 25px;
 }
 
-table, th, td, tr {
+table,thead, tfoot, th, td, tr {
   border: 2px solid black;
-  padding: 8px;
+  padding: 10px;
   margin-left: 100px;
   text-align: center;
-
 }
 
 thead {
-  background-color:rgba(243, 245, 211, 0.986);
+  background-color:rgb(243, 245, 129);
+}
+table tfoot {
+  background-color:rgba(253, 253, 253, 0.822);
 }
 
-tr:nth-child(even){
+tbody:nth-child(odd){
   background-color:rgba(194, 243, 243, 0.986);
 }
 
@@ -170,4 +172,16 @@ tr:nth-child(even){
   margin-top: 25px;
   max-width: 20%;
   height: auto;
+}
+form{
+  border: 3px solid black;
+  padding: 10px;
+  margin-left: 100px;
+  margin-bottom: 25px;;
+  background-color: rgb(247, 221, 173);
+  font-family: Arial, Helvetica, sans-serif;
+}
+form legend{
+  font-size: x-large;
+  padding-bottom: 15px;
 }
