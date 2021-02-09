@@ -4,7 +4,7 @@
 //  - add hours array
 //  - add elements by id for table
 
-let hours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'];
+const hours = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'];
 
 let allCookiesStands = [];
 
@@ -15,7 +15,7 @@ let totalsForFooter = [];
 let grandTotals = 0;
 
 // - add a event handler or listener
-//    -step one. add element id from HTML
+//    -step one. add element id from HTML/DOM
 let myForm = document.getElementById('box-one');
 
 
@@ -68,10 +68,10 @@ Store.prototype.render = function () {
 function calFooterTotals() {
   totalsForFooter = [];
   grandTotals = 0;
-  for (let i = 0; i < hours.length; i++); {
+  for (let i = 0; i < hours.length; i++) {
     let hourTotal = 0;
-    for (let j = 0; j < allCookiesStands.length; j++); {
-      hourTotal += allCookiesStands[j].Store.cookiesSoldHourlyArray[i];
+    for (let j = 0; j < allCookiesStands.length; j++) {
+      hourTotal += allCookiesStands[j].cookiesSoldHourlyArray[i];
     }
     totalsForFooter.push(hourTotal);
     grandTotals += hourTotal;
@@ -80,7 +80,7 @@ function calFooterTotals() {
 // - add an event handler or listener
 //    -step three. event handler- declare callback function with one parameter
 //    -parameter = event
-function dataSubmit(event){
+function dataSubmit(event) {
   event.preventDefault();
 
   let location = event.target.location.value;
@@ -88,8 +88,12 @@ function dataSubmit(event){
   let maximum = +event.target.maximum.value;
   let average = +event.target.average.value;
 
-  let newStore = Store(location, minimum, maximum, average);
+  let newStore = new Store(location, minimum, maximum, average);
   newStore.render();
+  let tfooter = document.getElementById('tfooter');
+  tfooter.remove();
+  renderFooter();
+
 }
 
 
@@ -123,7 +127,9 @@ function renderHeader() {
 
 function renderFooter() {
   calFooterTotals();
+  console.log(totalsForFooter);
   let tfooter = document.createElement('tfoot');
+  tfooter.setAttribute('id', 'tfooter');
   let tr = document.createElement('tr');
   let td = document.createElement('td');
   td.textContent = 'Totals';
